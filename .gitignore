@@ -2,3 +2,9 @@
 /src/obj/*
 packages/*
 /.vs/**/.suo
+**/bin/**
+**/obj/**
+/.vs/Serilog.Sinks.ElmahCore/DesignTimeBuild/.dtbcache.v2
+/examples/AspNetCoreExample/AspNetCoreExample.csproj.user
+/output/*
+/src/packages/**
