@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Serilog.Core;
 using Serilog.Events;
+using Serilog.Sinks.ElmahCore.Exceptions;
 
 namespace Serilog.Sinks.ElmahCore
 {
@@ -26,7 +27,7 @@ namespace Serilog.Sinks.ElmahCore
                 logEvent.Level == LogEventLevel.Fatal)
             {
                 //TODO: Anyway to set the message?
-                ElmahExtensions.RiseError(logEvent.Exception);
+                ElmahExtensions.RiseError(logEvent.Exception ?? new WrappedElmahException(logEvent.RenderMessage()));
 
                 //This mehtod is currently broken in ELMAHCore
                 //_httpContextAccessor.HttpContext.RiseError(logEvent.Exception);
