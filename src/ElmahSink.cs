@@ -27,7 +27,7 @@ namespace Serilog.Sinks.ElmahCore
                 logEvent.Level == LogEventLevel.Fatal)
             {
                 //TODO: Anyway to set the message?
-                ElmahExtensions.RiseError(logEvent.Exception ?? new WrappedElmahException(logEvent.RenderMessage()));
+                ElmahExtensions.RaiseError(logEvent.Exception ?? new WrappedElmahException(logEvent.RenderMessage()));
 
                 //This mehtod is currently broken in ELMAHCore
                 //_httpContextAccessor.HttpContext.RiseError(logEvent.Exception);

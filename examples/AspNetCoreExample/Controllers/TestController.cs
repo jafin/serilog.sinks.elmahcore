@@ -34,8 +34,8 @@ namespace AspNetCoreExample.Controllers
         [HttpGet("ManualException")]
         public IActionResult TriggerManualException()
         {
-            this.HttpContext.RiseError(new Exception("Test")); //fails due to https://github.com/ElmahCore/ElmahCore/issues/103
-            ElmahExtensions.RiseError(new Exception("Test2"));
+            HttpContext.RaiseError(new Exception("Test")); //fails due to https://github.com/ElmahCore/ElmahCore/issues/103
+            ElmahExtensions.RaiseError(new Exception("Test2"));
             return Ok();
         }
     }
