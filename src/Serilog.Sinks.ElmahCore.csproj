@@ -1,8 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net6.0;net8.0</TargetFrameworks>
     <LangVersion>default</LangVersion>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>warnings</Nullable>
   </PropertyGroup>
 
   <ItemGroup>

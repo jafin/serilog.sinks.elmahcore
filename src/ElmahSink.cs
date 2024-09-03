@@ -29,7 +29,7 @@ namespace Serilog.Sinks.ElmahCore
                 //TODO: Anyway to set the message?
                 ElmahExtensions.RaiseError(logEvent.Exception ?? new WrappedElmahException(logEvent.RenderMessage()));
 
-                //This mehtod is currently broken in ELMAHCore
+                //This method is currently broken in ELMAHCore
                 //_httpContextAccessor.HttpContext.RiseError(logEvent.Exception);
             }
         }
